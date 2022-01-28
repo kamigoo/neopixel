@@ -1,12 +1,10 @@
-let strip = neopixel.create(DigitalPin.P1, 6, NeoPixelMode.RGB)
-strip.showRainbow(1, 360)
-let range = strip.range(0, 2)
-let range2 = strip.range(3, 5)
+let color = 0
+let led2 = 0
+let strip = neopixel.create(DigitalPin.P1, 10, NeoPixelMode.RGB)
+basic.showString("LED")
 basic.forever(function () {
-    strip.rotate(1)
+    led2 = randint(0, 9)
+    color = neopixel.rgb(randint(0, 255), randint(0, 255), randint(0, 255))
+    strip.setPixelColor(led2, color)
     strip.show()
-    basic.pause(20)
-    basic.showIcon(IconNames.Diamond)
-    basic.pause(20)
-    basic.showIcon(IconNames.SmallDiamond)
 })
