@@ -1,5 +1,5 @@
 {
-    "name": "neopixel",
+    "name": "neopixel test",
     "description": "",
     "dependencies": {
         "core": "*",

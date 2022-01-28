@@ -1,6 +1,12 @@
-let strip = neopixel.create(DigitalPin.P0, 24, NeoPixelMode.RGB)
+let strip = neopixel.create(DigitalPin.P1, 6, NeoPixelMode.RGB)
 strip.showRainbow(1, 360)
+let range = strip.range(0, 2)
+let range2 = strip.range(3, 5)
 basic.forever(function () {
     strip.rotate(1)
     strip.show()
+    basic.pause(20)
+    basic.showIcon(IconNames.Diamond)
+    basic.pause(20)
+    basic.showIcon(IconNames.SmallDiamond)
 })
